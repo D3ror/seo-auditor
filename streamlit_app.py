@@ -26,7 +26,7 @@ except Exception as e:
 
         if run_clicked:
                 with st.status("Preparing to crawl…", expanded=True) as status:
-try:
+        try:
 # 1) Validate input
         status.write("Validating input…")
         parsed = urlparse(domain.strip())
