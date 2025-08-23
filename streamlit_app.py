@@ -18,8 +18,8 @@ error_path = out_dir / "error.log" # optional: have your crawler write errors he
 
 #Show latest results if available
 if results_path.exists():
-        st.subheader("Latest results")
-        try:
+st.subheader("Latest results")
+try:
 st.dataframe(pd.read_csv(results_path))
 except Exception as e:
 st.error(f"Could not read results.csv: {e}")
@@ -33,8 +33,6 @@ parsed = urlparse(domain.strip())
 if parsed.scheme not in ("http", "https") or not parsed.netloc:
 status.update(label="Invalid URL. Please include https://", state="error")
 st.stop()
-
-text
         # 2) Launch your crawler here
         status.write("Launching crawler…")
         # Replace this section with your actual crawler start.
