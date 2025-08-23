@@ -28,8 +28,8 @@ if run_clicked:
         with st.status("Preparing to crawl…", expanded=True) as status:
 try:
 # 1) Validate input
-status.write("Validating input…")
-parsed = urlparse(domain.strip())
+        status.write("Validating input…")
+        parsed = urlparse(domain.strip())
 if parsed.scheme not in ("http", "https") or not parsed.netloc:
 status.update(label="Invalid URL. Please include https://", state="error")
 st.stop()
