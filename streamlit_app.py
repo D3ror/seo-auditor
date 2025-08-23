@@ -25,7 +25,7 @@ except Exception as e:
         st.error(f"Could not read results.csv: {e}")
 
 if run_clicked:
-        with st.status("Preparing to crawl…", expanded=True) as status:
+                with st.status("Preparing to crawl…", expanded=True) as status:
 try:
 # 1) Validate input
         status.write("Validating input…")
