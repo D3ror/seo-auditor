@@ -16,7 +16,7 @@ results_path = out_dir / "results.csv"
 log_path = out_dir / "runner.log" # optional: have your crawler write logs here
 error_path = out_dir / "error.log" # optional: have your crawler write errors here
 
-Show latest results if available
+#Show latest results if available
 if results_path.exists():
 st.subheader("Latest results")
 try:
