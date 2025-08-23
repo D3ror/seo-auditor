@@ -18,11 +18,11 @@ error_path = out_dir / "error.log" # optional: have your crawler write errors he
 
 #Show latest results if available
 if results_path.exists():
-st.subheader("Latest results")
+        st.subheader("Latest results")
 try:
-st.dataframe(pd.read_csv(results_path))
+        st.dataframe(pd.read_csv(results_path))
 except Exception as e:
-st.error(f"Could not read results.csv: {e}")
+        st.error(f"Could not read results.csv: {e}")
 
 if run_clicked:
 with st.status("Preparing to crawl…", expanded=True) as status:
